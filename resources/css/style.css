@@ -1,0 +1,295 @@
+/*********************************************************
+  1. GLOBAL RESET & BASE STYLES
+*********************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /*********************************************************
+    2. NAVIGATION BAR
+  *********************************************************/
+  nav {
+    background-color: #222;
+    padding: 0 20px;
+  }
+  
+  nav ul.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  
+  /* Spacing between navbar items */
+  nav ul.nav-links li {
+    margin-right: 20px;
+  }
+  
+  /* Navbar Links */
+  nav ul.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav ul.nav-links li a:hover {
+    color: #66b2ff;
+  }
+  
+  /* Push the icon to the far right in the nav */
+  .icon {
+    margin-left: auto;
+  }
+  
+  .icon img {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+  
+  /*********************************************************
+    3. FOOTER
+  *********************************************************/
+  footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  footer a {
+    color: #66b2ff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /*********************************************************
+    4. HOME PAGE STYLES
+       (Class names used in home.html)
+  *********************************************************/
+  main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .intro {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .description {
+    max-width: 600px;
+  }
+  
+  .description p {
+    margin-bottom: 15px;
+  }
+  
+  .resume-link {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .resume-link:hover {
+    text-decoration: underline;
+  }
+  
+  /*********************************************************
+    5. HOBBIES PAGE STYLES
+       (Grid-based layout for cards)
+  *********************************************************/
+  /* Container for the entire page's main content */
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Card Grid Container */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .card h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 0.95em;
+    line-height: 1.4em;
+    color: #666;
+  }
+  
+  /*********************************************************
+    6. PROJECTS PAGE STYLES
+       (Carousel layout)
+  *********************************************************/
+  .carousel-container {
+    display: flex;               /* Horizontal stacking of slides */
+    overflow-x: auto;            /* Scroll horizontally if needed */
+    gap: 20px;                   /* Space between slides */
+    scroll-behavior: smooth;     /* Smooth scrolling effect */
+    padding-bottom: 20px;        /* Space at bottom if needed */
+    max-width: 1000px;
+    margin: 0 auto;              /* Center the container */
+  }
+  
+  .slide {
+    position: relative;
+    flex: 0 0 auto;              /* Prevent slides from shrinking */
+    width: 300px;                /* Fixed width for each slide */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Overlay Card on the Slide Image */
+  .slide-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .slide-card h2 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+  }
+  
+  .slide-card p {
+    font-size: 0.95em;
+    line-height: 1.3em;
+  }
+  
+  /*********************************************************
+    7. RESUME PAGE STYLES
+  *********************************************************/
+  /* Main resume container */
+  .resume-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  .resume-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  
+  .resume-intro {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Download Resume Button */
+  .download-btn {
+    display: inline-block;
+    margin: 20px auto;
+    background-color: #007acc;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .download-btn:hover {
+    background-color: #005f99;
+  }
+  
+  /* Content Blocks in Resume */
+  .resume-content {
+    margin-top: 30px;
+  }
+  
+  /* Section Headings in Resume */
+  .resume-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 30px;
+  }
+  
+  /* Sub-Headings in Resume */
+  .resume-content h3 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  /* Lists */
+  .resume-content ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    margin-bottom: 10px;
+  }
+  
+  /* General Paragraph Spacing */
+  .resume-content p {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  
