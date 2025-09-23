@@ -1,0 +1,114 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #222;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+}
+header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #a2a9b1;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-family: Georgia, serif;
+}
+header p {
+    margin: 0.25rem 0 0 0;
+    color: #54595d;
+    font-size: 0.875rem;
+}
+nav {
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    margin: 1rem 1.5rem;
+    padding: 0.5rem;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+nav a {
+    text-decoration: none;
+    color: #0645ad;
+    font-size: 0.875rem;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 0 1.5rem 2rem 1.5rem;
+}
+section {
+    margin-bottom: 1.5rem;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 0.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: Georgia, serif;
+}
+h3 {
+    font-size: 1.17rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+p {
+    margin: 0.5rem 0;
+    text-align: justify;
+}
+figure {
+    background: #f8f9fa;
+    border: 1px solid #c8ccd1;
+    padding: 0.25rem;
+    margin: 1rem 2rem;
+    text-align: center;
+}
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+figcaption {
+    font-size: 0.875rem;
+    padding: 0.25rem;
+    margin: 0;
+}
+footer {
+    border-top: 1px solid #a2a9b1;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    color: #54595d;
+}
+em {
+    font-style: italic;
+}
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
