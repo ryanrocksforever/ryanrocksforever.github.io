@@ -1,0 +1,220 @@
+:root {
+    --primary-color: #00695c;
+    --secondary-color: #004d40;
+    --bg-color: #f5f5f5;
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: #333;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+header h1 .material-icons {
+    margin-right: 0.5rem;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:focus,
+nav a:hover {
+    text-decoration: underline;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+    background: #ffffc7;
+    color: #333;
+    padding: 0.5rem 1rem;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+caption {
+    caption-side: top;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+}
+
+th {
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e0f2f1;
+}
+
+form {
+    max-width: 600px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+fieldset {
+    border: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+button:hover,
+button:focus {
+    background-color: var(--secondary-color);
+}
+
+button .material-icons {
+    margin-right: 0.4rem;
+}
+
+aside {
+    background-color: #e8f5e9;
+    padding: 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #c8e6c9;
+}
+
+.material-icons {
+    vertical-align: middle;
+}

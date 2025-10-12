@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessible Travel in Boulder, Colorado</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../resources/css/lab3.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header>
+    <h1>
+        <span class="material-icons" aria-hidden="true">accessible</span>
+        Accessible Travel in Boulder, Colorado
+    </h1>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#attractions">Attractions</a></li>
+            <li><a href="#contact">Book a Tour</a></li>
+
+        </ul>
+    </nav>
+</header>
+<main id="main-content">
+    <article id="intro">
+        <header>
+            <h2>Welcome</h2>
+        </header>
+        <p>
+            Nestled at the base of the Rocky Mountains, Boulder, Colorado, is a
+            vibrant city known for its stunning natural beauty and progressive
+            cultural scene. With paved trails, accessible accommodations and
+            wheelchair‑friendly public spaces, the city is an excellent destination
+            for travelers with mobility needs. While some areas such as rugged
+            hiking trails or older buildings can present challenges, the city
+            overall offers a welcoming and inclusive environment.
+        </p>
+        <figure>
+            <img src="../resources/img/mountains.png" alt="Illustration of mountains representing the Rocky Mountains surrounding Boulder" />
+            <figcaption>A stylized illustration of the Rocky Mountains provides visual context without conveying essential information.</figcaption>
+        </figure>
+    </article>
+
+    <section id="attractions">
+        <header>
+            <h2><span class="material-icons" aria-hidden="true">map</span> Accessible Attractions</h2>
+        </header>
+        <p>
+            The following table highlights some of Boulder's accessible attractions and key
+            features. Each attraction includes smooth pathways, step‑free entrances and
+            nearby accessible facilities.
+        </p>
+        <table>
+            <caption>Major accessible attractions in Boulder and their key features</caption>
+            <thead>
+            <tr>
+                <th scope="col">Attraction</th>
+                <th scope="col">Accessible Features</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Pearl Street Mall</th>
+                <td>Smooth brick pathways, ramps at intersections, step‑free entrances,
+                    accessible restrooms and plentiful accessible parking.</td>
+            </tr>
+            <tr>
+                <th scope="row">Boulder Creek Path</th>
+                <td>Paved and relatively flat trail with benches and shaded rest areas;
+                    starting near downtown provides the smoothest access points.</td>
+            </tr>
+            <tr>
+                <th scope="row">Chautauqua Park</th>
+                <td>Paved walkways connecting key areas; accessible meadows and dining
+                    options even though most hiking trails are rugged.</td>
+            </tr>
+            <tr>
+                <th scope="row">University of Colorado Boulder</th>
+                <td>Ramps, elevators and accessible restrooms throughout the campus;
+                    accessible attractions include the CU Art Museum and Fiske
+                    Planetarium.</td>
+            </tr>
+            <tr>
+                <th scope="row">NCAR (National Center for Atmospheric Research)</th>
+                <td>Ramps, elevators and accessible restrooms within the building;
+                    interactive exhibits and panoramic indoor views are fully
+                    accessible.</td>
+            </tr>
+            <tr>
+                <th scope="row">Museum of Boulder</th>
+                <td>Interactive exhibits with elevators and ramps on every level;
+                    wheelchair‑friendly rooftop terrace and accessible special
+                    events.</td>
+            </tr>
+            <tr>
+                <th scope="row">Boulder Farmers Market</th>
+                <td>Flat, paved surfaces throughout the market with accessible restrooms
+                    and parking; arriving early helps secure accessible parking.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contact">
+        <header>
+            <h2><span class="material-icons" aria-hidden="true">event</span> Book an Accessible Tour</h2>
+        </header>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Your Information</legend>
+                <div>
+                    <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" required aria-describedby="email-help">
+                    <small id="email-help">We'll never share your email with anyone else.</small>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Tour Preferences</legend>
+                <div>
+                    <label for="tour">Choose a tour:</label>
+                    <select id="tour" name="tour">
+                        <option value=""> Please select </option>
+                        <option value="pearl">Pearl Street Experience</option>
+                        <option value="creek">Creek Path Nature Walk</option>
+                        <option value="chautauqua">Chautauqua Picnic Day</option>
+                        <option value="ncab">Climate Science Adventure at NCAR</option>
+                        <option value="museum">History &amp; Culture Museum Tour</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend>Accessibility Needs (check all that apply)</legend>
+                    <div>
+                        <input type="checkbox" id="wheelchair" name="needs" value="wheelchair">
+                        <label for="wheelchair">Wheelchair accessibility required</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="hearing" name="needs" value="hearing">
+                        <label for="hearing">Assistive listening devices</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="visual" name="needs" value="visual">
+                        <label for="visual">Large print materials</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+            </fieldset>
+            <button type="submit">
+                <span class="material-icons" aria-hidden="true">send</span>
+                Submit
+            </button>
+        </form>
+    </section>
+
+    
+</main>
+
+<footer>
+    <p>&copy; 2025 Accessible Boulder Guide. All rights reserved.</p>
+    <address>
+        For inquiries, email us at <a href="mailto:info@accessibleboulder.com">info@accessibleboulder.com</a>
+    </address>
+</footer>
+</body>
+</html>
