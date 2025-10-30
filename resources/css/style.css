@@ -13,7 +13,43 @@
     color: #333;
     line-height: 1.6;
   }
-  
+
+  /* Accessibility: Focus styles for keyboard navigation */
+  a:focus,
+  button:focus {
+    outline: 3px solid #66b2ff;
+    outline-offset: 2px;
+  }
+
+  /* Skip to main content link for screen readers */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #0056b3;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Screen reader only text */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
   /*********************************************************
     2. NAVIGATION BAR
   *********************************************************/
@@ -111,13 +147,25 @@
   }
   
   .resume-link {
-    color: #007acc;
+    display: inline-block;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 12px 24px;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
   }
-  
+
   .resume-link:hover {
-    text-decoration: underline;
+    background-color: #003d82;
+    transform: translateY(-2px);
+  }
+
+  .resume-link:focus {
+    outline: 3px solid #66b2ff;
+    outline-offset: 2px;
   }
   
   /*********************************************************

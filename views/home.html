@@ -2,60 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Home Page</title>
-  <!-- Link to external CSS file -->
-  <!-- Adjust the path if your CSS file is located elsewhere -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ryan Natvig's personal portfolio website showcasing web development projects and experience" />
+  <title>Ryan Natvig - Home</title>
   <link rel="stylesheet" href="../resources/css/style.css" />
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
     <ul class="nav-links">
       <li><a href="home.html">Home</a></li>
       <li><a href="hobbies.html">Hobbies</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <!-- Icon on the extreme right of the navbar -->
+      <li><a href="lab12.html">Lab12</a></li>
+      <li><a href="lab3.html">Lab3</a></li>
+      <li><a href="final.html">Final</a></li>
       <li class="icon">
-        <a href="#">
+        <a href="#" aria-label="Home icon">
           <img
             src="../resources/img/favicon.ico"
-            alt="Icon"
+            alt=""
+            role="presentation"
           />
         </a>
       </li>
     </ul>
   </nav>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Intro Section -->
-    <section class="intro">
-      <!-- Replace img1.jpg with your own photo file name in the img folder -->
+  <main id="main-content" role="main">
+    <section class="intro" aria-labelledby="intro-heading">
+      <h1 class="sr-only" id="intro-heading">About Me</h1>
       <img
         class="profile-pic"
         src="../resources/img/img1.jpg"
-        alt="My Photo"
+        alt="Professional headshot of Ryan Natvig"
       />
       <div class="description">
         <p>
-          Hello! My name is Jane Doe, and I'm passionate about creating
-          beautiful, user-friendly websites. I love exploring new web
-          technologies and bringing creative ideas to life.
+          Hello! My name is Ryan Natvig. I'm a Computer Science student at the University of Colorado, Boulder,
+          pursuing a minor in Business. With experience as a Web Developer at BeachVolleyballCamps.com and a
+          Tech Instructor teaching coding and 3D modeling, I'm passionate about creating innovative solutions
+          and helping others learn technology. I bring a unique blend of technical skills in programming
+          (C++, Python, JavaScript) and leadership experience from coaching volleyball and leading multiple
+          extracurricular organizations.
         </p>
         <p>
-          <a href="resume.html" class="resume-link">View my Resume</a>
+          <a href="resume.html" class="resume-link" aria-label="View Ryan Natvig's resume">View my Resume</a>
         </p>
       </div>
     </section>
   </main>
 
-  <!-- Footer with social media link(s) -->
-  <footer>
+  <footer role="contentinfo">
     <p>
       Connect with me on
       <a
-        href="https://www.linkedin.com/in/YOUR-LINKEDIN-PROFILE"
+        href="https://www.linkedin.com/in/ryan-natvig-7b462125a/"
         target="_blank"
       >
         LinkedIn
