@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Implement Universal Design | Universal Design Project</title>
+  <link rel="stylesheet" href="../resources/css/style.css" />
+  <link rel="stylesheet" href="../resources/css/universal.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="final.html">Final</a></li>
+      <li><a href="why.html">Why</a></li>
+      <li><a href="what.html">What</a></li>
+      <li><a href="how.html" aria-current="page">How</a></li>
+      <li class="icon">
+        <a href="#">
+          <img src="../resources/img/favicon.ico" alt="Site icon" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <h1>How to Implement Universal Design</h1>
+    <p class="tagline">Practical techniques for building accessible websites.</p>
+
+    <section class="ud-section">
+      <h2>Semantic HTML: The Foundation</h2>
+      <p>Using the right HTML elements is the most important thing you can do for accessibility. Screen readers and other assistive technologies rely on semantic structure.</p>
+
+      <h3>Use Proper Headings</h3>
+      <p>Headings create a document outline. Use them in order (h1, then h2, then h3) without skipping levels.</p>
+      <div class="code-example">
+        <pre><code>&lt;!-- Good --&gt;
+&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;h2&gt;Section&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;
+
+&lt;!-- Bad: Skipping heading levels --&gt;
+&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;h4&gt;Why did we skip to h4?&lt;/h4&gt;</code></pre>
+      </div>
+
+      <h3>Landmark Elements</h3>
+      <p>Use HTML5 landmark elements to define page regions:</p>
+      <div class="code-example">
+        <pre><code>&lt;header&gt;Site header and logo&lt;/header&gt;
+&lt;nav&gt;Navigation links&lt;/nav&gt;
+&lt;main&gt;Primary content&lt;/main&gt;
+&lt;aside&gt;Sidebar content&lt;/aside&gt;
+&lt;footer&gt;Copyright and links&lt;/footer&gt;</code></pre>
+      </div>
+
+      <h3>Lists for Lists</h3>
+      <p>Use <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, and <code>&lt;li&gt;</code> for lists—not divs with bullet characters.</p>
+
+      <h3>Buttons vs Links</h3>
+      <ul class="benefit-list">
+        <li><strong>&lt;button&gt;</strong>: For actions (submit, toggle, open modal)</li>
+        <li><strong>&lt;a&gt;</strong>: For navigation (go to another page or location)</li>
+      </ul>
+    </section>
+
+    <section class="ud-section">
+      <h2>Images and Media</h2>
+
+      <h3>Alt Text for Images</h3>
+      <p>Every <code>&lt;img&gt;</code> needs an <code>alt</code> attribute. The content depends on context:</p>
+      <div class="code-example">
+        <pre><code>&lt;!-- Informative image --&gt;
+&lt;img src="chart.png" alt="Sales increased 25% from Q1 to Q2"&gt;
+
+&lt;!-- Decorative image (empty alt) --&gt;
+&lt;img src="decorative-swirl.png" alt=""&gt;
+
+&lt;!-- Image as link --&gt;
+&lt;a href="/home"&gt;
+  &lt;img src="logo.png" alt="Company Name - Home"&gt;
+&lt;/a&gt;</code></pre>
+      </div>
+
+      <h3>Video Accessibility</h3>
+      <ul class="benefit-list">
+        <li><strong>Captions:</strong> Synchronized text for dialogue and sounds</li>
+        <li><strong>Transcripts:</strong> Full text version of audio content</li>
+        <li><strong>Audio descriptions:</strong> Narration of visual information</li>
+      </ul>
+    </section>
+
+    <section class="ud-section">
+      <h2>Keyboard Navigation</h2>
+      <p>Many users can't use a mouse. Ensure your site works with keyboard alone:</p>
+
+      <h3>Focus Management</h3>
+      <div class="code-example">
+        <pre><code>/* Make focus visible */
+:focus {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+
+/* Don't remove focus outlines! */
+/* BAD: :focus { outline: none; } */</code></pre>
+      </div>
+
+      <h3>Tab Order</h3>
+      <p>Interactive elements should be focusable in a logical order. Avoid using <code>tabindex</code> greater than 0.</p>
+
+      <h3>Skip Links</h3>
+      <p>Provide a "skip to main content" link at the top of the page:</p>
+      <div class="code-example">
+        <pre><code>&lt;a href="#main-content" class="skip-link"&gt;
+  Skip to main content
+&lt;/a&gt;
+
+&lt;!-- Later in the page --&gt;
+&lt;main id="main-content"&gt;...&lt;/main&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="ud-section">
+      <h2>Color and Contrast</h2>
+
+      <h3>Contrast Ratios</h3>
+      <p>WCAG requires minimum contrast ratios:</p>
+      <ul class="benefit-list">
+        <li><strong>4.5:1</strong> for normal text (AA)</li>
+        <li><strong>3:1</strong> for large text (18pt+ or 14pt bold)</li>
+        <li><strong>7:1</strong> for enhanced contrast (AAA)</li>
+      </ul>
+
+      <h3>Don't Rely on Color Alone</h3>
+      <p>Use additional indicators like icons, patterns, or text:</p>
+      <div class="code-example">
+        <pre><code>&lt;!-- Bad: Color only --&gt;
+&lt;span style="color: red"&gt;Error&lt;/span&gt;
+
+&lt;!-- Good: Color + icon + text --&gt;
+&lt;span class="error"&gt;
+  &lt;svg aria-hidden="true"&gt;...&lt;/svg&gt;
+  Error: Please enter a valid email
+&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="ud-section">
+      <h2>Forms</h2>
+
+      <h3>Labels</h3>
+      <p>Every form input needs an associated label:</p>
+      <div class="code-example">
+        <pre><code>&lt;!-- Method 1: Explicit association --&gt;
+&lt;label for="email"&gt;Email address&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;
+
+&lt;!-- Method 2: Implicit association --&gt;
+&lt;label&gt;
+  Email address
+  &lt;input type="email" name="email"&gt;
+&lt;/label&gt;</code></pre>
+      </div>
+
+      <h3>Error Messages</h3>
+      <p>Make errors clear and associate them with fields:</p>
+      <div class="code-example">
+        <pre><code>&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input
+  type="email"
+  id="email"
+  aria-describedby="email-error"
+  aria-invalid="true"
+&gt;
+&lt;span id="email-error" class="error"&gt;
+  Please enter a valid email address
+&lt;/span&gt;</code></pre>
+      </div>
+
+      <h3>Required Fields</h3>
+      <p>Use the <code>required</code> attribute and indicate visually:</p>
+      <div class="code-example">
+        <pre><code>&lt;label for="name"&gt;
+  Name &lt;span aria-label="required"&gt;*&lt;/span&gt;
+&lt;/label&gt;
+&lt;input type="text" id="name" required&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="ud-section">
+      <h2>ARIA: When HTML Isn't Enough</h2>
+      <p>ARIA (Accessible Rich Internet Applications) adds accessibility info to custom components. But remember: <strong>No ARIA is better than bad ARIA.</strong></p>
+
+      <h3>Common ARIA Attributes</h3>
+      <div class="code-example">
+        <pre><code>&lt;!-- Labeling --&gt;
+&lt;button aria-label="Close menu"&gt;X&lt;/button&gt;
+
+&lt;!-- Describing --&gt;
+&lt;input aria-describedby="hint"&gt;
+&lt;p id="hint"&gt;Password must be 8+ characters&lt;/p&gt;
+
+&lt;!-- State --&gt;
+&lt;button aria-expanded="false"&gt;Menu&lt;/button&gt;
+
+&lt;!-- Live regions (for dynamic content) --&gt;
+&lt;div aria-live="polite"&gt;Item added to cart&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="ud-section">
+      <h2>Responsive and Mobile-First</h2>
+
+      <h3>Viewport Meta Tag</h3>
+      <div class="code-example">
+        <pre><code>&lt;meta name="viewport"
+  content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+      </div>
+
+      <h3>Mobile-First CSS</h3>
+      <p>Start with mobile styles, then add complexity for larger screens:</p>
+      <div class="code-example">
+        <pre><code>/* Mobile first (default) */
+.container {
+  padding: 1rem;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+    max-width: 720px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}</code></pre>
+      </div>
+
+      <h3>Touch Targets</h3>
+      <p>Make interactive elements at least 44x44 pixels with adequate spacing.</p>
+    </section>
+
+    <section class="ud-section">
+      <h2>Testing Your Site</h2>
+
+      <h3>Automated Tools</h3>
+      <ul class="benefit-list">
+        <li><strong>WAVE:</strong> Browser extension for accessibility evaluation</li>
+        <li><strong>axe DevTools:</strong> Comprehensive accessibility testing</li>
+        <li><strong>Lighthouse:</strong> Built into Chrome DevTools</li>
+        <li><strong>W3C Validator:</strong> Check HTML validity</li>
+      </ul>
+
+      <h3>Manual Testing</h3>
+      <ul class="benefit-list">
+        <li><strong>Keyboard only:</strong> Navigate using Tab, Enter, Space, Arrow keys</li>
+        <li><strong>Screen reader:</strong> Test with NVDA (Windows), VoiceOver (Mac), or JAWS</li>
+        <li><strong>Zoom:</strong> Test at 200% zoom</li>
+        <li><strong>Color:</strong> View in grayscale to check color dependence</li>
+      </ul>
+
+      <h3>Checklist</h3>
+      <ul class="checklist">
+        <li>All images have appropriate alt text</li>
+        <li>Color contrast meets WCAG AA (4.5:1)</li>
+        <li>All functionality available via keyboard</li>
+        <li>Focus indicators are visible</li>
+        <li>Form fields have associated labels</li>
+        <li>Page has proper heading structure</li>
+        <li>Skip link present and functional</li>
+        <li>No content flashes more than 3 times per second</li>
+        <li>HTML validates without errors</li>
+        <li>Site works on mobile devices</li>
+      </ul>
+    </section>
+
+    <section class="ud-section cta-section">
+      <div class="cta-box">
+        <p>You now have the knowledge to build inclusive websites!</p>
+        <a href="why.html" class="cta-button">Review Why This Matters</a>
+        <a href="what.html" class="cta-button cta-secondary">Revisit the Principles</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Universal Design Project | <a href="final.html">Back to Project Overview</a></p>
+  </footer>
+
+</body>
+</html>
