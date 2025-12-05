@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Accessibility Demo | Universal Design Project</title>
+  <link rel="stylesheet" href="../resources/css/style.css" />
+  <link rel="stylesheet" href="../resources/css/demo.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="final.html">Final</a></li>
+      <li><a href="why.html">Why</a></li>
+      <li><a href="what.html">What</a></li>
+      <li><a href="how.html">How</a></li>
+      <li><a href="demo.html" aria-current="page">Demo</a></li>
+      <li class="icon">
+        <a href="#">
+          <img src="../resources/img/favicon.ico" alt="Site icon" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <div class="demo-container">
+      <div id="three-canvas" role="img" aria-label="3D city scene with billboards containing accessibility information. Scroll to move through the city."></div>
+
+      <div class="demo-controls" role="region" aria-label="Demo controls">
+        <p class="scroll-hint">Scroll to explore the city</p>
+        <div class="speed-indicator" aria-live="polite">
+          <span class="sr-only">Current speed:</span>
+          <div class="speed-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="speed-fill"></div>
+          </div>
+        </div>
+        <button id="toggle-motion" class="control-btn" aria-pressed="false">
+          Pause Animation
+        </button>
+        <button id="reset-camera" class="control-btn">
+          Reset View
+        </button>
+      </div>
+
+      <div class="text-panel" role="region" aria-label="Billboard content for screen readers">
+        <h2 class="sr-only">All Billboard Messages</h2>
+        <button id="toggle-panel" class="panel-toggle" aria-expanded="false">
+          Show Text Version
+        </button>
+        <div class="panel-content" id="panel-content" hidden>
+          <div class="panel-scroll">
+            <section>
+              <h3>Universal Design</h3>
+              <p>Design for everyone, not just the average user. When we build for diversity, everyone benefits.</p>
+            </section>
+            <section>
+              <h3>Perceivable</h3>
+              <p>Information must be presentable in ways all users can perceive. Use alt text, captions, and sufficient contrast.</p>
+            </section>
+            <section>
+              <h3>Operable</h3>
+              <p>All functionality must be available via keyboard. No mouse required. Everyone can navigate.</p>
+            </section>
+            <section>
+              <h3>Understandable</h3>
+              <p>Content should be readable and predictable. Clear language, consistent navigation, helpful error messages.</p>
+            </section>
+            <section>
+              <h3>Robust</h3>
+              <p>Build with semantic HTML. Works with assistive technologies today and tomorrow.</p>
+            </section>
+            <section>
+              <h3>1 Billion+</h3>
+              <p>People worldwide live with disabilities. That's 15% of the global population you might be excluding.</p>
+            </section>
+            <section>
+              <h3>Color Contrast</h3>
+              <p>4.5:1 minimum for normal text. 3:1 for large text. Test your designs!</p>
+            </section>
+            <section>
+              <h3>Keyboard First</h3>
+              <p>If it works with a keyboard, it works for everyone. Tab, Enter, Space, Arrows.</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Universal Design Project | <a href="final.html">Back to Project Overview</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="../resources/js/demo.js"></script>
+</body>
+</html>
